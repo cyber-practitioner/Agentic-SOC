@@ -92,6 +92,8 @@ resource "aws_instance" "ubuntu" {
     #!/bin/bash
     wget -O splunk-10.0.2-e2d18b4767e9-linux-amd64.deb "https://download.splunk.com/products/splunk/releases/10.0.2/linux/splunk-10.0.2-e2d18b4767e9-linux-amd64.deb"
     sudo dpkg -i splunk-10.0.2-e2d18b4767e9-linux-amd64.deb
+    sudo -u splunk bash
+    cd /opt/splunk/bin
    EOF
    )
 
@@ -123,6 +125,7 @@ resource "aws_instance" "windows" {
     
     # Set network to Private profile
     Get-NetConnectionProfile | Set-NetConnectionProfile -NetworkCategory Private
+    wget -O splunkforwarder-10.0.2-e2d18b4767e9-windows-x64.msi "https://download.splunk.com/products/universalforwarder/releases/10.0.2/windows/splunkforwarder-10.0.2-e2d18b4767e9-windows-x64.msi"
     </powershell>
   EOF
   )
