@@ -1,0 +1,12 @@
+# T1047 - Windows Management Instrumentation Detection
+# MITRE ATT&CK: T1047 - Windows Management Instrumentation
+# Description: Detect suspicious WMI usage for lateral movement, persistence, and execution
+
+# First, let's analyze what WMI events we have from the simulation
+index=win earliest=-24h
+| search (EventCode=1 OR EventCode=4688)
+| search (wmi* OR winmgmt OR scrcons OR wmiprvse OR wmic OR "Windows Management Instrumentation")
+| head 50
+| table _time, EventCode, _raw
+
+CREDENTIAL DUMPING: https://github.com/splunk/security_content/blob/develop/detections/endpoint/windows_possible_credential_dumping.yml
