@@ -24,7 +24,7 @@ agent = create_agent(
 def simple_chat():
     """Super simple chat interface"""
     print("🚀 Simple SOC Assistant")
-    print("Commands: 'show alerts' or 'summarize [ID]' or 'exit'")
+    print("Commands: 'show alerts' or 'summarize [ID]' or 'find automations' or 'trigger an automation for alert [ID]' or 'exit'")
     
     conversation = []
     
