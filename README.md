@@ -4,11 +4,11 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-production-brightgreen.svg)]()
 
-An intelligent Security Operations Center assistant that automates threat detection, alert analysis, and incident response workflows. This solution integrates AI-driven decision making with traditional SIEM platforms to provide automated security orchestration and response capabilities.
+An intelligent Security Operations Center assistant that automates alert analysis, and incident response workflows. This solution integrates AI-driven decision making with traditional SIEM platforms to provide automated security orchestration and response capabilities.
 
 ## Overview
 
-The AI SOC Assistant processes security alerts from SIEM platforms, performs intelligent analysis using large language models, and executes automated response actions through integration with security orchestration platforms. The system is designed for organizations implementing security automation using modern no-code/low-code approaches.
+The AI SOC Assistant processes security alerts from SIEM platforms, performs intelligent analysis using large language models, and executes automated response actions through integration with security orchestration platforms. The system is designed for organizations implementing security automation using modern no-code/low-code approaches and oftens faces playbook/runbook workflow errors.
 
 ### Key Features
 
@@ -25,7 +25,6 @@ The system consists of four core components:
 1. **AI Agent** (`agent.py`) - Processes alerts and generates security recommendations
 2. **Web Server** (`webserver.py`) - Handles webhook ingestion and API endpoints
 3. **Automation Engine** - Executes security playbooks via Tines integration
-4. **Dashboard Interface** - Provides real-time operational visibility
 
 ## System Requirements
 
